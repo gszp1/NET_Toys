@@ -28,7 +28,7 @@ namespace Zabawki
 
         private void addButton_Click(object sender, EventArgs e)
         {
-
+            addToy(availableToysList.SelectedItem.ToString());
         }
 
         private void addToy(string toy)
@@ -39,18 +39,22 @@ namespace Zabawki
                 case "Car":
                     newToy = new Car();
                     toys.Add(newToy);
+                    toysList.Items.Add(newToy);
                     break;
                 case "Plane":
                     newToy = new Plane();
                     toys.Add(newToy);
+                    toysList.Items.Add(newToy);
                     break;
                 case "Computer":
                     newToy = new Computer();
                     toys.Add(newToy);
+                    toysList.Items.Add(newToy);
                     break;
                 case "Submarine":
                     newToy = new Submarine();
                     toys.Add(newToy);
+                    toysList.Items.Add(newToy);
                     break;
                 default:
                     break;
