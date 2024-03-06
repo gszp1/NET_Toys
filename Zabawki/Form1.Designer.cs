@@ -35,18 +35,18 @@
             this.speedTextBox = new System.Windows.Forms.TextBox();
             this.speedIncreaseButton = new System.Windows.Forms.Button();
             this.speedDecreaseButton = new System.Windows.Forms.Button();
-            this.speedGroupField = new System.Windows.Forms.GroupBox();
-            this.heightGroupField = new System.Windows.Forms.GroupBox();
+            this.speedGroupBox = new System.Windows.Forms.GroupBox();
+            this.heightGroupBox = new System.Windows.Forms.GroupBox();
             this.heightTextBox = new System.Windows.Forms.TextBox();
             this.heightIncreaseButton = new System.Windows.Forms.Button();
             this.heightDecreaseButton = new System.Windows.Forms.Button();
-            this.depthGroupField = new System.Windows.Forms.GroupBox();
+            this.depthGroupBox = new System.Windows.Forms.GroupBox();
             this.depthTextBox = new System.Windows.Forms.TextBox();
             this.depthIncreaseButton = new System.Windows.Forms.Button();
             this.depthDecreaseButton = new System.Windows.Forms.Button();
-            this.speedGroupField.SuspendLayout();
-            this.heightGroupField.SuspendLayout();
-            this.depthGroupField.SuspendLayout();
+            this.speedGroupBox.SuspendLayout();
+            this.heightGroupBox.SuspendLayout();
+            this.depthGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // availableToysList
@@ -112,29 +112,29 @@
             this.speedDecreaseButton.Text = "-";
             this.speedDecreaseButton.UseVisualStyleBackColor = true;
             // 
-            // speedGroupField
+            // speedGroupBox
             // 
-            this.speedGroupField.Controls.Add(this.speedTextBox);
-            this.speedGroupField.Controls.Add(this.speedIncreaseButton);
-            this.speedGroupField.Controls.Add(this.speedDecreaseButton);
-            this.speedGroupField.Location = new System.Drawing.Point(452, 112);
-            this.speedGroupField.Name = "speedGroupField";
-            this.speedGroupField.Size = new System.Drawing.Size(270, 52);
-            this.speedGroupField.TabIndex = 13;
-            this.speedGroupField.TabStop = false;
-            this.speedGroupField.Text = "Speed";
+            this.speedGroupBox.Controls.Add(this.speedTextBox);
+            this.speedGroupBox.Controls.Add(this.speedIncreaseButton);
+            this.speedGroupBox.Controls.Add(this.speedDecreaseButton);
+            this.speedGroupBox.Location = new System.Drawing.Point(452, 112);
+            this.speedGroupBox.Name = "speedGroupBox";
+            this.speedGroupBox.Size = new System.Drawing.Size(270, 52);
+            this.speedGroupBox.TabIndex = 13;
+            this.speedGroupBox.TabStop = false;
+            this.speedGroupBox.Text = "Speed";
             // 
-            // heightGroupField
+            // heightGroupBox
             // 
-            this.heightGroupField.Controls.Add(this.heightTextBox);
-            this.heightGroupField.Controls.Add(this.heightIncreaseButton);
-            this.heightGroupField.Controls.Add(this.heightDecreaseButton);
-            this.heightGroupField.Location = new System.Drawing.Point(452, 265);
-            this.heightGroupField.Name = "heightGroupField";
-            this.heightGroupField.Size = new System.Drawing.Size(270, 52);
-            this.heightGroupField.TabIndex = 14;
-            this.heightGroupField.TabStop = false;
-            this.heightGroupField.Text = "Height";
+            this.heightGroupBox.Controls.Add(this.heightTextBox);
+            this.heightGroupBox.Controls.Add(this.heightIncreaseButton);
+            this.heightGroupBox.Controls.Add(this.heightDecreaseButton);
+            this.heightGroupBox.Location = new System.Drawing.Point(452, 265);
+            this.heightGroupBox.Name = "heightGroupBox";
+            this.heightGroupBox.Size = new System.Drawing.Size(270, 52);
+            this.heightGroupBox.TabIndex = 14;
+            this.heightGroupBox.TabStop = false;
+            this.heightGroupBox.Text = "Height";
             // 
             // heightTextBox
             // 
@@ -162,17 +162,17 @@
             this.heightDecreaseButton.Text = "-";
             this.heightDecreaseButton.UseVisualStyleBackColor = true;
             // 
-            // depthGroupField
+            // depthGroupBox
             // 
-            this.depthGroupField.Controls.Add(this.depthTextBox);
-            this.depthGroupField.Controls.Add(this.depthIncreaseButton);
-            this.depthGroupField.Controls.Add(this.depthDecreaseButton);
-            this.depthGroupField.Location = new System.Drawing.Point(452, 186);
-            this.depthGroupField.Name = "depthGroupField";
-            this.depthGroupField.Size = new System.Drawing.Size(270, 52);
-            this.depthGroupField.TabIndex = 15;
-            this.depthGroupField.TabStop = false;
-            this.depthGroupField.Text = "Depth";
+            this.depthGroupBox.Controls.Add(this.depthTextBox);
+            this.depthGroupBox.Controls.Add(this.depthIncreaseButton);
+            this.depthGroupBox.Controls.Add(this.depthDecreaseButton);
+            this.depthGroupBox.Location = new System.Drawing.Point(452, 186);
+            this.depthGroupBox.Name = "depthGroupBox";
+            this.depthGroupBox.Size = new System.Drawing.Size(270, 52);
+            this.depthGroupBox.TabIndex = 15;
+            this.depthGroupBox.TabStop = false;
+            this.depthGroupBox.Text = "Depth";
             // 
             // depthTextBox
             // 
@@ -205,21 +205,21 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(853, 482);
-            this.Controls.Add(this.depthGroupField);
-            this.Controls.Add(this.heightGroupField);
-            this.Controls.Add(this.speedGroupField);
+            this.Controls.Add(this.depthGroupBox);
+            this.Controls.Add(this.heightGroupBox);
+            this.Controls.Add(this.speedGroupBox);
             this.Controls.Add(this.removeButton);
             this.Controls.Add(this.addButton);
             this.Controls.Add(this.toysList);
             this.Controls.Add(this.availableToysList);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.speedGroupField.ResumeLayout(false);
-            this.speedGroupField.PerformLayout();
-            this.heightGroupField.ResumeLayout(false);
-            this.heightGroupField.PerformLayout();
-            this.depthGroupField.ResumeLayout(false);
-            this.depthGroupField.PerformLayout();
+            this.speedGroupBox.ResumeLayout(false);
+            this.speedGroupBox.PerformLayout();
+            this.heightGroupBox.ResumeLayout(false);
+            this.heightGroupBox.PerformLayout();
+            this.depthGroupBox.ResumeLayout(false);
+            this.depthGroupBox.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -233,12 +233,12 @@
         private System.Windows.Forms.TextBox speedTextBox;
         private System.Windows.Forms.Button speedIncreaseButton;
         private System.Windows.Forms.Button speedDecreaseButton;
-        private System.Windows.Forms.GroupBox speedGroupField;
-        private System.Windows.Forms.GroupBox heightGroupField;
+        private System.Windows.Forms.GroupBox speedGroupBox;
+        private System.Windows.Forms.GroupBox heightGroupBox;
         private System.Windows.Forms.TextBox heightTextBox;
         private System.Windows.Forms.Button heightIncreaseButton;
         private System.Windows.Forms.Button heightDecreaseButton;
-        private System.Windows.Forms.GroupBox depthGroupField;
+        private System.Windows.Forms.GroupBox depthGroupBox;
         private System.Windows.Forms.TextBox depthTextBox;
         private System.Windows.Forms.Button depthIncreaseButton;
         private System.Windows.Forms.Button depthDecreaseButton;

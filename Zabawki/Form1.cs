@@ -60,7 +60,7 @@ namespace Zabawki
             }
         }
 
-        private void SetSpeedGroupBoxContent(Toy toy)
+        private void SetSpeedGroupFieldContent(Toy toy)
         {
             if ((toy is ISpeed) == false)
             {
@@ -69,17 +69,32 @@ namespace Zabawki
                 speedTextBox.Text = "";
                 return;
             }
+
         }
 
-        private void SetHeightGroupBoxContent(Toy toy)
+        private void SetHeightGroupFieldContent(Toy toy)
         {
 
         }
 
-        private void SetDepthGroupBoxContent(Toy toy)
+        private void SetDepthGroupFieldContent(Toy toy)
         {
 
         }
+
+        private void DisableGroupBoxContents(GroupBox groupBox)
+        {
+            foreach (Control controlElement in groupBox.Controls)
+            {
+                if (controlElement is TextBox)
+                {
+                    ((TextBox)controlElement).Text = "";
+                }
+            }
+            groupBox.Enabled = false;
+        }
+
+        
 
     }
 }
