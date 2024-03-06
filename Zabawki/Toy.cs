@@ -8,9 +8,15 @@ namespace Zabawki
 {
     public class Toy
     {
-        string name;
+        private string name;
 
-        int id;
+        private int id;
+
+        public Toy (string name, int id)
+        {
+            this.name = name;
+            this.id = id;
+        }
 
         public override string ToString()
         {

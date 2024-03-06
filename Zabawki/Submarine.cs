@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Zabawki
-{   
+{
     public class Submarine: ISpeed, IDepth
     {
         private static int submarineCount = 0;
