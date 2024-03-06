@@ -7,13 +7,10 @@ using System.Threading.Tasks;
 
 namespace Zabawki
 {
-    public class Car : ISpeed
+    public class Car : Toy, ISpeed
     {
-        private static string name = "Car";
 
         private static int carCounter = 0;
-
-        private int id;
 
         private int speed;
 
@@ -21,12 +18,11 @@ namespace Zabawki
 
         private int minSpeed;
 
-        public Car(int maxSpeed = 10, int minSpeed = -10)
+        public Car(int maxSpeed = 10, int minSpeed = -10) : base("Car", carCounter++)
         {
-            speed = 0;
             this.maxSpeed = maxSpeed;
             this.minSpeed = minSpeed;
-            id = carCounter++;
+            speed = 0;
         }
 
         public void IncreaseSpeed()
@@ -43,11 +39,6 @@ namespace Zabawki
             {
                 --speed;
             }
-        }
-
-        public override string ToString()
-        {
-            return string.Concat(name, id);
         }
     }
 }
