@@ -26,7 +26,7 @@ namespace Zabawki
 
         private void addButton_Click(object sender, EventArgs e)
         {
-            addToy(availableToysList.SelectedItem.ToString());
+            AddToy(availableToysList.SelectedItem.ToString());
         }
 
         private void removeButton_Click(object sender, EventArgs e)
@@ -39,7 +39,7 @@ namespace Zabawki
 
         }
 
-        private void addToy(string toyName)
+        private void AddToy(string toyName)
         {
             switch(toyName)
             {
@@ -64,9 +64,6 @@ namespace Zabawki
         {
             if ((toy is ISpeed) == false)
             {
-                speedDecreaseButton.Enabled = false;
-                speedIncreaseButton.Enabled = false;
-                speedTextBox.Text = "";
                 return;
             }
 
