@@ -59,7 +59,10 @@ namespace Zabawki
                 default:
                     break;
             }
-            
+        }
+
+        private void removeToy(string toy)
+        {
 
         }
     }
