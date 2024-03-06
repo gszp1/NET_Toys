@@ -20,7 +20,7 @@ namespace Zabawki
 
         public override string ToString()
         {
-            return $"{name}{id + 1}";
+            return $"{name} {id + 1}";
         }
 
     }

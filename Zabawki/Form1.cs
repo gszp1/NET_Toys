@@ -107,7 +107,5 @@ namespace Zabawki
             groupBox.Enabled = false;
         }
 
-        
-
     }
 }
