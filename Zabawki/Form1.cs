@@ -42,6 +42,10 @@ namespace Zabawki
 
         private void speedDecreaseButton_Click(object sender, EventArgs e)
         {
+            if ((toysList.SelectedItem is ISpeed) == false)
+            {
+                return;
+            }
             ISpeed selectedToy = (ISpeed)toysList.SelectedItem;
             selectedToy.DecreaseSpeed();
             speedTextBox.Text = selectedToy.Speed.ToString();
@@ -49,6 +53,10 @@ namespace Zabawki
 
         private void speedIncreaseButton_Click(object sender, EventArgs e)
         {
+            if ((toysList.SelectedItem is ISpeed) == false)
+            {
+                return;
+            }
             ISpeed selectedToy = (ISpeed)toysList.SelectedItem;
             selectedToy.IncreaseSpeed();
             speedTextBox.Text = selectedToy.Speed.ToString();
@@ -56,6 +64,10 @@ namespace Zabawki
 
         private void depthDecreaseButton_Click(object sender, EventArgs e)
         {
+            if ((toysList.SelectedItem is IDepth) == false)
+            {
+                return;
+            }
             IDepth selectedToy = (IDepth)toysList.SelectedItem;
             selectedToy.DecreaseDepth();
             depthTextBox.Text = selectedToy.Depth.ToString();
@@ -63,6 +75,10 @@ namespace Zabawki
 
         private void depthIncreaseButton_Click(object sender, EventArgs e)
         {
+            if ((toysList.SelectedItem is IDepth) == false)
+            {
+                return;
+            }
             IDepth selectedToy = (IDepth)toysList.SelectedItem;
             selectedToy.IncreaseDepth();
             depthTextBox.Text = selectedToy.Depth.ToString();
@@ -70,6 +86,10 @@ namespace Zabawki
 
         private void heightDecreaseButton_Click(object sender, EventArgs e)
         {
+            if ((toysList.SelectedItem is IHeight) == false)
+            {
+                return;
+            }
             IHeight selectedToy = (IHeight)toysList.SelectedItem;
             selectedToy.DecreaseHeight();
             heightTextBox.Text = selectedToy.Height.ToString();
@@ -77,6 +97,10 @@ namespace Zabawki
 
         private void heightIncreaseButton_Click(object sender, EventArgs e)
         {
+            if ((toysList.SelectedItem is IHeight) == false)
+            {
+                return;
+            }
             IHeight selectedToy = (IHeight)toysList.SelectedItem;
             selectedToy.IncreaseHeight();
             heightTextBox.Text = selectedToy.Height.ToString();
