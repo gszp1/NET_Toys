@@ -6,14 +6,9 @@ using System.Threading.Tasks;
 
 namespace Zabawki
 {
-    public class Plane : ISpeed, IHeight
+    public class Plane : Toy, ISpeed, IHeight
     {
-
-        private string name = "Plane";
-
         private static int planeCounter = 0;
-
-        private int id;
 
         private const int MinSpeed = 0;
 
@@ -27,13 +22,12 @@ namespace Zabawki
 
         private int maxHeight;
 
-        public Plane(int maxSpeed = 15, int maxHeight = 20)
+        public Plane(int maxSpeed = 15, int maxHeight = 20) : base("Plane", planeCounter++)
         {
             this.maxSpeed = maxSpeed;
             this.maxHeight = maxHeight;
             speed = 0;
             height = 0;
-            id = planeCounter++;
         }
 
         public void IncreaseSpeed()
@@ -67,11 +61,5 @@ namespace Zabawki
                 --height;
             }
         }
-
-        public override string ToString()
-        {
-            return string.Concat(name, id);
-        }
-
     }
 }
