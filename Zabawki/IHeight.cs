@@ -11,5 +11,7 @@ namespace Zabawki
         void IncreaseHeight();
 
         void DecreaseHeight();
+
+        int Height { get; }
     }
 }

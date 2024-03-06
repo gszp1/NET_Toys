@@ -11,5 +11,8 @@ namespace Zabawki
         void IncreaseDepth();
 
         void DecreaseDepth();
+
+        int Depth {  get; }
+
     }
 }

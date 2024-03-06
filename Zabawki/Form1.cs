@@ -36,7 +36,9 @@ namespace Zabawki
 
         private void toysList_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            SetSpeedGroupFieldContent((Toy)toysList.SelectedItem);
+            SetHeightGroupFieldContent((Toy)toysList.SelectedItem);
+            SetDepthGroupFieldContent((Toy)toysList.SelectedItem);
         }
 
         private void AddToy(string toyName)
@@ -64,19 +66,30 @@ namespace Zabawki
         {
             if ((toy is ISpeed) == false)
             {
+                DisableGroupBoxContents(speedGroupBox);
                 return;
             }
+            speedGroupBox.Enabled = true;
+            speedGroupBox.Text = (ISpeed)toy;
 
         }
 
         private void SetHeightGroupFieldContent(Toy toy)
         {
-
+            if ((toy is IHeight) == false)
+            {
+                DisableGroupBoxContents(heightGroupBox);
+                return;
+            }
         }
 
         private void SetDepthGroupFieldContent(Toy toy)
         {
-
+            if ((toy is IDepth) == false)
+            {
+                DisableGroupBoxContents(depthGroupBox);
+                return;
+            }
         }
 
         private void DisableGroupBoxContents(GroupBox groupBox)

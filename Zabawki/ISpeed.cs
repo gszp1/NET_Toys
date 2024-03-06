@@ -11,5 +11,8 @@ namespace Zabawki
         void IncreaseSpeed();
 
         void DecreaseSpeed();
+
+        int Speed { get; }
+
     }
 }
