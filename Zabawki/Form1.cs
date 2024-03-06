@@ -41,6 +41,20 @@ namespace Zabawki
             SetDepthGroupFieldContent((Toy)toysList.SelectedItem);
         }
 
+        private void speedDecreaseButton_Click(object sender, EventArgs e)
+        {
+            ISpeed selectedToy = (ISpeed)toysList.SelectedItem;
+            selectedToy.DecreaseSpeed();
+            speedTextBox.Text = selectedToy.Speed.ToString();
+        }
+
+        private void speedIncreaseButton_Click(object sender, EventArgs e)
+        {
+            ISpeed selectedToy = (ISpeed)toysList.SelectedItem;
+            selectedToy.IncreaseSpeed();
+            speedTextBox.Text = selectedToy.Speed.ToString();
+        }
+
         private void AddToy(string toyName)
         {
             switch(toyName)

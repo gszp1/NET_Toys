@@ -102,6 +102,7 @@
             this.speedIncreaseButton.TabIndex = 5;
             this.speedIncreaseButton.Text = "+";
             this.speedIncreaseButton.UseVisualStyleBackColor = true;
+            this.speedIncreaseButton.Click += new System.EventHandler(this.speedIncreaseButton_Click);
             // 
             // speedDecreaseButton
             // 
@@ -111,6 +112,7 @@
             this.speedDecreaseButton.TabIndex = 6;
             this.speedDecreaseButton.Text = "-";
             this.speedDecreaseButton.UseVisualStyleBackColor = true;
+            this.speedDecreaseButton.Click += new System.EventHandler(this.speedDecreaseButton_Click);
             // 
             // speedGroupBox
             // 
