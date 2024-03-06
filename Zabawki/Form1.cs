@@ -15,8 +15,6 @@ namespace Zabawki
 
         private string[] availableToys = { "Car", "Plane", "Submarine", "Computer" };
 
-        private List<Toy> toys = new List<Toy>();
-
         public Form1()
         {
             InitializeComponent();
@@ -33,51 +31,28 @@ namespace Zabawki
 
         private void removeButton_Click(object sender, EventArgs e)
         {
-            removeToy(toysList.SelectedItem.ToString());
+            toysList.Items.Remove(toysList.SelectedItem);
         }
 
         private void addToy(string toyName)
         {
-            Toy newToy = null;
             switch(toyName)
             {
                 case "Car":
-                    newToy = new Car();
-                    toys.Add(newToy);
-                    toysList.Items.Add(newToy);
+                    toysList.Items.Add(new Car());
                     break;
                 case "Plane":
-                    newToy = new Plane();
-                    toys.Add(newToy);
-                    toysList.Items.Add(newToy);
+                    toysList.Items.Add(new Plane());
                     break;
                 case "Computer":
-                    newToy = new Computer();
-                    toys.Add(newToy);
-                    toysList.Items.Add(newToy);
+                    toysList.Items.Add(new Computer());
                     break;
                 case "Submarine":
-                    newToy = new Submarine();
-                    toys.Add(newToy);
-                    toysList.Items.Add(newToy);
+                    toysList.Items.Add(new Submarine());
                     break;
                 default:
                     break;
             }
         }
-
-        private void removeToy(string toyName)
-        {
-            foreach (Toy toy in toys)
-            {
-                if (toy.ToString().Equals(toyName) == true) {
-                    toys.Remove(toy);
-                    Console.WriteLine(toy.ToString());
-                    toysList.Items.Remove(toy);
-                    return;
-                }
-            }
-        }
-
     }
 }
