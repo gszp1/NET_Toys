@@ -22,6 +22,7 @@ namespace Zabawki
             {
                 availableToysList.Items.Add(toy);
             }
+            SetGroupBoxes(null);
         }
 
         private void addButton_Click(object sender, EventArgs e)
@@ -36,9 +37,7 @@ namespace Zabawki
 
         private void toysList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            SetSpeedGroupFieldContent((Toy)toysList.SelectedItem);
-            SetHeightGroupFieldContent((Toy)toysList.SelectedItem);
-            SetDepthGroupFieldContent((Toy)toysList.SelectedItem);
+            SetGroupBoxes((Toy)toysList.SelectedItem);
         }
 
         private void speedDecreaseButton_Click(object sender, EventArgs e)
@@ -82,9 +81,6 @@ namespace Zabawki
             selectedToy.IncreaseHeight();
             heightTextBox.Text = selectedToy.Height.ToString();
         }
-
-
-
 
         private void AddToy(string toyName)
         {
@@ -152,5 +148,11 @@ namespace Zabawki
             groupBox.Enabled = false;
         }
 
+        private void SetGroupBoxes(Toy selectedToy)
+        {
+            SetSpeedGroupFieldContent(selectedToy);
+            SetHeightGroupFieldContent(selectedToy);
+            SetDepthGroupFieldContent(selectedToy);
+        } 
     }
 }
