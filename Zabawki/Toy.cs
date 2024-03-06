@@ -10,11 +10,6 @@ namespace Zabawki
     {
         private string name;
 
-        public string Name
-        {
-            get { return name; }
-        }
-
         private int id;
 
         public Toy (string name, int id)

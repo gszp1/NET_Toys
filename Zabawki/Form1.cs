@@ -15,7 +15,7 @@ namespace Zabawki
 
         private string[] availableToys = { "Car", "Plane", "Submarine", "Computer" };
 
-        private List<Object> toys = new List<Object>();
+        private List<Toy> toys = new List<Toy>();
 
         public Form1()
         {
@@ -31,10 +31,15 @@ namespace Zabawki
             addToy(availableToysList.SelectedItem.ToString());
         }
 
-        private void addToy(string toy)
+        private void removeButton_Click(object sender, EventArgs e)
         {
-            Object newToy = null;
-            switch(toy)
+            removeToy(toysList.SelectedItem.ToString());
+        }
+
+        private void addToy(string toyName)
+        {
+            Toy newToy = null;
+            switch(toyName)
             {
                 case "Car":
                     newToy = new Car();
@@ -61,9 +66,18 @@ namespace Zabawki
             }
         }
 
-        private void removeToy(string toy)
+        private void removeToy(string toyName)
         {
-
+            foreach (Toy toy in toys)
+            {
+                if (toy.ToString().Equals(toyName) == true) {
+                    toys.Remove(toy);
+                    Console.WriteLine(toy.ToString());
+                    toysList.Items.Remove(toy);
+                    return;
+                }
+            }
         }
+
     }
 }
