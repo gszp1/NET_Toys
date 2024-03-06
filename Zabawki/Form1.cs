@@ -70,8 +70,7 @@ namespace Zabawki
                 return;
             }
             speedGroupBox.Enabled = true;
-            speedGroupBox.Text = (ISpeed)toy;
-
+            speedTextBox.Text = ((ISpeed)toy).Speed.ToString();
         }
 
         private void SetHeightGroupFieldContent(Toy toy)
@@ -81,6 +80,8 @@ namespace Zabawki
                 DisableGroupBoxContents(heightGroupBox);
                 return;
             }
+            heightGroupBox.Enabled = true;
+            heightTextBox.Text = ((IHeight)toy).Height.ToString();
         }
 
         private void SetDepthGroupFieldContent(Toy toy)
@@ -90,6 +91,8 @@ namespace Zabawki
                 DisableGroupBoxContents(depthGroupBox);
                 return;
             }
+            depthGroupBox.Enabled = true;
+            depthTextBox.Text = ((IDepth)toy).Depth.ToString();
         }
 
         private void DisableGroupBoxContents(GroupBox groupBox)

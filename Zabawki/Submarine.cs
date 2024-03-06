@@ -22,6 +22,16 @@ namespace Zabawki
 
         private int depth;
 
+        public int Speed
+        {
+            get { return speed; }
+        }
+
+        public int Depth
+        {
+            get { return depth; }
+        }
+
         public Submarine(int maxDepth = 20, int minSpeed = -10, int maxSpeed = 15)
             : base("Submarine", submarineCount++)
         {

@@ -22,6 +22,17 @@ namespace Zabawki
 
         private int maxHeight;
 
+        public int Speed
+        {
+            get { return speed; }
+        }
+
+        public int Height
+        {
+            get { return height; }
+        }
+
+
         public Plane(int maxSpeed = 15, int maxHeight = 20) : base("Plane", planeCounter++)
         {
             this.maxSpeed = maxSpeed;

@@ -18,6 +18,11 @@ namespace Zabawki
 
         private int minSpeed;
 
+        public int Speed
+        {
+            get { return speed; }
+        }
+
         public Car(int maxSpeed = 10, int minSpeed = -10) : base("Car", carCounter++)
         {
             this.maxSpeed = maxSpeed;
