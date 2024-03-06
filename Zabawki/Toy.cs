@@ -10,6 +10,11 @@ namespace Zabawki
     {
         private string name;
 
+        public string Name
+        {
+            get { return name; }
+        }
+
         private int id;
 
         public Toy (string name, int id)
@@ -22,5 +27,6 @@ namespace Zabawki
         {
             return $"{name}{id + 1}";
         }
+
     }
 }
