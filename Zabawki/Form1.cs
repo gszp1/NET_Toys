@@ -69,6 +69,21 @@ namespace Zabawki
             depthTextBox.Text = selectedToy.Depth.ToString();
         }
 
+        private void heightDecreaseButton_Click(object sender, EventArgs e)
+        {
+            IHeight selectedToy = (IHeight)toysList.SelectedItem;
+            selectedToy.DecreaseHeight();
+            heightTextBox.Text = selectedToy.Height.ToString();
+        }
+
+        private void heightIncreaseButton_Click(object sender, EventArgs e)
+        {
+            IHeight selectedToy = (IHeight)toysList.SelectedItem;
+            selectedToy.IncreaseHeight();
+            heightTextBox.Text = selectedToy.Height.ToString();
+        }
+
+
 
 
         private void AddToy(string toyName)

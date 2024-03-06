@@ -154,6 +154,7 @@
             this.heightIncreaseButton.TabIndex = 5;
             this.heightIncreaseButton.Text = "+";
             this.heightIncreaseButton.UseVisualStyleBackColor = true;
+            this.heightIncreaseButton.Click += new System.EventHandler(this.heightIncreaseButton_Click);
             // 
             // heightDecreaseButton
             // 
@@ -163,6 +164,7 @@
             this.heightDecreaseButton.TabIndex = 6;
             this.heightDecreaseButton.Text = "-";
             this.heightDecreaseButton.UseVisualStyleBackColor = true;
+            this.heightDecreaseButton.Click += new System.EventHandler(this.heightDecreaseButton_Click);
             // 
             // depthGroupBox
             // 
