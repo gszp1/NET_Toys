@@ -6,13 +6,9 @@ using System.Threading.Tasks;
 
 namespace Zabawki
 {
-    public class Submarine: ISpeed, IDepth
+    public class Submarine: Toy, ISpeed, IDepth
     {
         private static int submarineCount = 0;
-
-        private static string name = "Submarine";
-
-        private int id = 0;
 
         private const int minDepth = 0;
 
@@ -27,13 +23,13 @@ namespace Zabawki
         private int depth;
 
         public Submarine(int maxDepth = 20, int minSpeed = -10, int maxSpeed = 15)
+            : base("Submarine", submarineCount++)
         {
             this.maxDepth = maxDepth;
             this.minSpeed = minSpeed;
             this.maxSpeed = maxSpeed;
             speed = 0;
             depth = 0;
-            id = submarineCount++;
         }
 
         public void IncreaseSpeed()
@@ -66,11 +62,6 @@ namespace Zabawki
             {
                 --depth;
             }
-        }
-
-        public override string ToString()
-        {
-            return string.Concat(name, id);
         }
     } 
 }
