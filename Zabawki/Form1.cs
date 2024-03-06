@@ -34,6 +34,11 @@ namespace Zabawki
             toysList.Items.Remove(toysList.SelectedItem);
         }
 
+        private void toysList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void addToy(string toyName)
         {
             switch(toyName)
@@ -54,5 +59,27 @@ namespace Zabawki
                     break;
             }
         }
+
+        private void SetSpeedGroupBoxContent(Toy toy)
+        {
+            if ((toy is ISpeed) == false)
+            {
+                speedDecreaseButton.Enabled = false;
+                speedIncreaseButton.Enabled = false;
+                speedTextBox.Text = "";
+                return;
+            }
+        }
+
+        private void SetHeightGroupBoxContent(Toy toy)
+        {
+
+        }
+
+        private void SetDepthGroupBoxContent(Toy toy)
+        {
+
+        }
+
     }
 }

@@ -64,6 +64,7 @@
             this.toysList.Name = "toysList";
             this.toysList.Size = new System.Drawing.Size(118, 173);
             this.toysList.TabIndex = 1;
+            this.toysList.SelectedIndexChanged += new System.EventHandler(this.toysList_SelectedIndexChanged);
             // 
             // addButton
             // 
