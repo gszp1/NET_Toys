@@ -55,6 +55,22 @@ namespace Zabawki
             speedTextBox.Text = selectedToy.Speed.ToString();
         }
 
+        private void depthDecreaseButton_Click(object sender, EventArgs e)
+        {
+            IDepth selectedToy = (IDepth)toysList.SelectedItem;
+            selectedToy.DecreaseDepth();
+            depthTextBox.Text = selectedToy.Depth.ToString();
+        }
+
+        private void depthIncreaseButton_Click(object sender, EventArgs e)
+        {
+            IDepth selectedToy = (IDepth)toysList.SelectedItem;
+            selectedToy.IncreaseDepth();
+            depthTextBox.Text = selectedToy.Depth.ToString();
+        }
+
+
+
         private void AddToy(string toyName)
         {
             switch(toyName)

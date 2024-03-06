@@ -192,6 +192,7 @@
             this.depthIncreaseButton.TabIndex = 5;
             this.depthIncreaseButton.Text = "+";
             this.depthIncreaseButton.UseVisualStyleBackColor = true;
+            this.depthIncreaseButton.Click += new System.EventHandler(this.depthIncreaseButton_Click);
             // 
             // depthDecreaseButton
             // 
@@ -201,6 +202,7 @@
             this.depthDecreaseButton.TabIndex = 6;
             this.depthDecreaseButton.Text = "-";
             this.depthDecreaseButton.UseVisualStyleBackColor = true;
+            this.depthDecreaseButton.Click += new System.EventHandler(this.depthDecreaseButton_Click);
             // 
             // Form1
             // 
