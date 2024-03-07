@@ -64,7 +64,7 @@
             this.toysList.Name = "toysList";
             this.toysList.Size = new System.Drawing.Size(118, 173);
             this.toysList.TabIndex = 1;
-            this.toysList.SelectedIndexChanged += new System.EventHandler(this.toysList_SelectedIndexChanged);
+            this.toysList.SelectedIndexChanged += new System.EventHandler(this.ToysList_SelectedIndexChanged);
             // 
             // addButton
             // 
@@ -74,7 +74,7 @@
             this.addButton.TabIndex = 2;
             this.addButton.Text = "Add";
             this.addButton.UseVisualStyleBackColor = true;
-            this.addButton.Click += new System.EventHandler(this.addButton_Click);
+            this.addButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
             // removeButton
             // 
@@ -84,7 +84,7 @@
             this.removeButton.TabIndex = 3;
             this.removeButton.Text = "Remove";
             this.removeButton.UseVisualStyleBackColor = true;
-            this.removeButton.Click += new System.EventHandler(this.removeButton_Click);
+            this.removeButton.Click += new System.EventHandler(this.RemoveButton_Click);
             // 
             // speedTextBox
             // 
@@ -102,7 +102,7 @@
             this.speedIncreaseButton.TabIndex = 5;
             this.speedIncreaseButton.Text = "+";
             this.speedIncreaseButton.UseVisualStyleBackColor = true;
-            this.speedIncreaseButton.Click += new System.EventHandler(this.speedIncreaseButton_Click);
+            this.speedIncreaseButton.Click += new System.EventHandler(this.SpeedIncreaseButton_Click);
             // 
             // speedDecreaseButton
             // 
@@ -112,7 +112,7 @@
             this.speedDecreaseButton.TabIndex = 6;
             this.speedDecreaseButton.Text = "-";
             this.speedDecreaseButton.UseVisualStyleBackColor = true;
-            this.speedDecreaseButton.Click += new System.EventHandler(this.speedDecreaseButton_Click);
+            this.speedDecreaseButton.Click += new System.EventHandler(this.SpeedDecreaseButton_Click);
             // 
             // speedGroupBox
             // 
@@ -154,7 +154,7 @@
             this.heightIncreaseButton.TabIndex = 5;
             this.heightIncreaseButton.Text = "+";
             this.heightIncreaseButton.UseVisualStyleBackColor = true;
-            this.heightIncreaseButton.Click += new System.EventHandler(this.heightIncreaseButton_Click);
+            this.heightIncreaseButton.Click += new System.EventHandler(this.HeightIncreaseButton_Click);
             // 
             // heightDecreaseButton
             // 
@@ -164,7 +164,7 @@
             this.heightDecreaseButton.TabIndex = 6;
             this.heightDecreaseButton.Text = "-";
             this.heightDecreaseButton.UseVisualStyleBackColor = true;
-            this.heightDecreaseButton.Click += new System.EventHandler(this.heightDecreaseButton_Click);
+            this.heightDecreaseButton.Click += new System.EventHandler(this.HeightDecreaseButton_Click);
             // 
             // depthGroupBox
             // 
@@ -194,7 +194,7 @@
             this.depthIncreaseButton.TabIndex = 5;
             this.depthIncreaseButton.Text = "+";
             this.depthIncreaseButton.UseVisualStyleBackColor = true;
-            this.depthIncreaseButton.Click += new System.EventHandler(this.depthIncreaseButton_Click);
+            this.depthIncreaseButton.Click += new System.EventHandler(this.DepthIncreaseButton_Click);
             // 
             // depthDecreaseButton
             // 
@@ -204,7 +204,7 @@
             this.depthDecreaseButton.TabIndex = 6;
             this.depthDecreaseButton.Text = "-";
             this.depthDecreaseButton.UseVisualStyleBackColor = true;
-            this.depthDecreaseButton.Click += new System.EventHandler(this.depthDecreaseButton_Click);
+            this.depthDecreaseButton.Click += new System.EventHandler(this.DepthDecreaseButton_Click);
             // 
             // Form1
             // 
