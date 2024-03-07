@@ -46,48 +46,6 @@ namespace Zabawki
             SetGroupBoxes((Toy)toysList.SelectedItem);
         }
 
-        private void speedDecreaseButton_Click(object sender, EventArgs e)
-        {
-            UpdateToySpeed((Toy)toysList.SelectedItem, UpdateType.Decrease);
-        }
-
-        private void speedIncreaseButton_Click(object sender, EventArgs e)
-        {
-            UpdateToySpeed((Toy)toysList.SelectedItem, UpdateType.Increase);
-        }
-
-        private void depthDecreaseButton_Click(object sender, EventArgs e)
-        {
-            UpdateToyDepth((Toy)toysList.SelectedItem, UpdateType.Decrease);
-        }
-
-        private void depthIncreaseButton_Click(object sender, EventArgs e)
-        {
-            UpdateToyDepth((Toy)toysList.SelectedItem, UpdateType.Increase);
-        }
-
-        private void heightDecreaseButton_Click(object sender, EventArgs e)
-        {
-            if ((toysList.SelectedItem is IHeight) == false)
-            {
-                return;
-            }
-            IHeight selectedToy = (IHeight)toysList.SelectedItem;
-            selectedToy.DecreaseHeight();
-            heightTextBox.Text = selectedToy.Height.ToString();
-        }
-
-        private void heightIncreaseButton_Click(object sender, EventArgs e)
-        {
-            if ((toysList.SelectedItem is IHeight) == false)
-            {
-                return;
-            }
-            IHeight selectedToy = (IHeight)toysList.SelectedItem;
-            selectedToy.IncreaseHeight();
-            heightTextBox.Text = selectedToy.Height.ToString();
-        }
-
         private void AddToy(string toyName)
         {
             switch(toyName)
@@ -161,6 +119,36 @@ namespace Zabawki
             groupBox.Enabled = false;
         }
 
+        private void speedDecreaseButton_Click(object sender, EventArgs e)
+        {
+            UpdateToySpeed((Toy)toysList.SelectedItem, UpdateType.Decrease);
+        }
+
+        private void speedIncreaseButton_Click(object sender, EventArgs e)
+        {
+            UpdateToySpeed((Toy)toysList.SelectedItem, UpdateType.Increase);
+        }
+
+        private void depthDecreaseButton_Click(object sender, EventArgs e)
+        {
+            UpdateToyDepth((Toy)toysList.SelectedItem, UpdateType.Decrease);
+        }
+
+        private void depthIncreaseButton_Click(object sender, EventArgs e)
+        {
+            UpdateToyDepth((Toy)toysList.SelectedItem, UpdateType.Increase);
+        }
+
+        private void heightDecreaseButton_Click(object sender, EventArgs e)
+        {
+            UpdateToyHeight((Toy)toysList.SelectedItem, UpdateType.Decrease);
+        }
+
+        private void heightIncreaseButton_Click(object sender, EventArgs e)
+        {
+            UpdateToyHeight((Toy)toysList.SelectedItem, UpdateType.Increase);
+        }
+
         private void UpdateToySpeed(Toy toy, UpdateType type)
         {
             if ((toy is ISpeed) == false)
@@ -205,7 +193,23 @@ namespace Zabawki
 
         private void UpdateToyHeight(Toy toy, UpdateType type)
         {
-
+            if ((toysList.SelectedItem is IHeight) == false)
+            {
+                return;
+            }
+            IHeight selectedToy = (IHeight)toysList.SelectedItem;
+            switch (type)
+            {
+                case UpdateType.Increase:
+                    selectedToy.IncreaseHeight();
+                    break;
+                case UpdateType.Decrease:
+                    selectedToy.DecreaseHeight();
+                    break;
+                default:
+                    return;
+            }
+            heightTextBox.Text = selectedToy.Height.ToString();
         }
     }
 }
