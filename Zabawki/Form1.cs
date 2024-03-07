@@ -13,6 +13,12 @@ namespace Zabawki
     public partial class Form1 : Form
     {
 
+        enum UpdateType
+        {
+            Increase,
+            Decrease
+        }
+
         private string[] availableToys = { "Car", "Plane", "Submarine", "Computer" };
 
         public Form1()
@@ -127,6 +133,13 @@ namespace Zabawki
             }
         }
 
+        private void SetGroupBoxes(Toy selectedToy)
+        {
+            SetSpeedGroupFieldContent(selectedToy);
+            SetHeightGroupFieldContent(selectedToy);
+            SetDepthGroupFieldContent(selectedToy);
+        }
+
         private void SetSpeedGroupFieldContent(Toy toy)
         {
             if ((toy is ISpeed) == false)
@@ -172,11 +185,5 @@ namespace Zabawki
             groupBox.Enabled = false;
         }
 
-        private void SetGroupBoxes(Toy selectedToy)
-        {
-            SetSpeedGroupFieldContent(selectedToy);
-            SetHeightGroupFieldContent(selectedToy);
-            SetDepthGroupFieldContent(selectedToy);
-        } 
     }
 }
