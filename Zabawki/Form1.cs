@@ -48,24 +48,12 @@ namespace Zabawki
 
         private void speedDecreaseButton_Click(object sender, EventArgs e)
         {
-            if ((toysList.SelectedItem is ISpeed) == false)
-            {
-                return;
-            }
-            ISpeed selectedToy = (ISpeed)toysList.SelectedItem;
-            selectedToy.DecreaseSpeed();
-            speedTextBox.Text = selectedToy.Speed.ToString();
+            UpdateToySpeed((Toy)toysList.SelectedItem, UpdateType.Decrease);
         }
 
         private void speedIncreaseButton_Click(object sender, EventArgs e)
         {
-            if ((toysList.SelectedItem is ISpeed) == false)
-            {
-                return;
-            }
-            ISpeed selectedToy = (ISpeed)toysList.SelectedItem;
-            selectedToy.IncreaseSpeed();
-            speedTextBox.Text = selectedToy.Speed.ToString();
+            UpdateToySpeed((Toy)toysList.SelectedItem, UpdateType.Increase);
         }
 
         private void depthDecreaseButton_Click(object sender, EventArgs e)
@@ -185,5 +173,25 @@ namespace Zabawki
             groupBox.Enabled = false;
         }
 
+        private void UpdateToySpeed(Toy toy, UpdateType type)
+        {
+            if ((toy is ISpeed) == false)
+            {
+                return;
+            }
+            ISpeed selectedToy = (ISpeed)toy;
+            switch (type)
+            {
+                case UpdateType.Increase:
+                    selectedToy.IncreaseSpeed();
+                    break;
+                case UpdateType.Decrease:
+                    selectedToy.DecreaseSpeed();
+                    break;
+                default:
+                    return;
+            }
+            speedTextBox.Text = selectedToy.Speed.ToString();
+        }
     }
 }
