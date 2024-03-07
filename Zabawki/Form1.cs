@@ -31,7 +31,7 @@ namespace Zabawki
             SetGroupBoxes(null);
         }
 
-        private void addButton_Click(object sender, EventArgs e)
+        private void AddButton_Click(object sender, EventArgs e)
         {
             AddToy(availableToysList.SelectedItem.ToString());
         }
@@ -57,12 +57,12 @@ namespace Zabawki
             }
         }
 
-        private void removeButton_Click(object sender, EventArgs e)
+        private void RemoveButton_Click(object sender, EventArgs e)
         {
             toysList.Items.Remove(toysList.SelectedItem);
         }
 
-        private void toysList_SelectedIndexChanged(object sender, EventArgs e)
+        private void ToysList_SelectedIndexChanged(object sender, EventArgs e)
         {
             SetGroupBoxes((Toy)toysList.SelectedItem);
         }
@@ -119,32 +119,32 @@ namespace Zabawki
             groupBox.Enabled = false;
         }
 
-        private void speedDecreaseButton_Click(object sender, EventArgs e)
+        private void SpeedDecreaseButton_Click(object sender, EventArgs e)
         {
             UpdateToySpeed((Toy)toysList.SelectedItem, UpdateType.Decrease);
         }
 
-        private void speedIncreaseButton_Click(object sender, EventArgs e)
+        private void SpeedIncreaseButton_Click(object sender, EventArgs e)
         {
             UpdateToySpeed((Toy)toysList.SelectedItem, UpdateType.Increase);
         }
 
-        private void depthDecreaseButton_Click(object sender, EventArgs e)
+        private void DepthDecreaseButton_Click(object sender, EventArgs e)
         {
             UpdateToyDepth((Toy)toysList.SelectedItem, UpdateType.Decrease);
         }
 
-        private void depthIncreaseButton_Click(object sender, EventArgs e)
+        private void DepthIncreaseButton_Click(object sender, EventArgs e)
         {
             UpdateToyDepth((Toy)toysList.SelectedItem, UpdateType.Increase);
         }
 
-        private void heightDecreaseButton_Click(object sender, EventArgs e)
+        private void HeightDecreaseButton_Click(object sender, EventArgs e)
         {
             UpdateToyHeight((Toy)toysList.SelectedItem, UpdateType.Decrease);
         }
 
-        private void heightIncreaseButton_Click(object sender, EventArgs e)
+        private void HeightIncreaseButton_Click(object sender, EventArgs e)
         {
             UpdateToyHeight((Toy)toysList.SelectedItem, UpdateType.Increase);
         }
