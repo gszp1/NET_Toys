@@ -58,24 +58,12 @@ namespace Zabawki
 
         private void depthDecreaseButton_Click(object sender, EventArgs e)
         {
-            if ((toysList.SelectedItem is IDepth) == false)
-            {
-                return;
-            }
-            IDepth selectedToy = (IDepth)toysList.SelectedItem;
-            selectedToy.DecreaseDepth();
-            depthTextBox.Text = selectedToy.Depth.ToString();
+            UpdateToyDepth((Toy)toysList.SelectedItem, UpdateType.Decrease);
         }
 
         private void depthIncreaseButton_Click(object sender, EventArgs e)
         {
-            if ((toysList.SelectedItem is IDepth) == false)
-            {
-                return;
-            }
-            IDepth selectedToy = (IDepth)toysList.SelectedItem;
-            selectedToy.IncreaseDepth();
-            depthTextBox.Text = selectedToy.Depth.ToString();
+            UpdateToyDepth((Toy)toysList.SelectedItem, UpdateType.Increase);
         }
 
         private void heightDecreaseButton_Click(object sender, EventArgs e)
@@ -192,6 +180,32 @@ namespace Zabawki
                     return;
             }
             speedTextBox.Text = selectedToy.Speed.ToString();
+        }
+
+        private void UpdateToyDepth(Toy toy, UpdateType type)
+        {
+            if ((toysList.SelectedItem is IDepth) == false)
+            {
+                return;
+            }
+            IDepth selectedToy = (IDepth)toysList.SelectedItem;
+            switch (type)
+            {
+                case UpdateType.Increase:
+                    selectedToy.IncreaseDepth();
+                    break;
+                case UpdateType.Decrease:
+                    selectedToy.DecreaseDepth();
+                    break;
+                default:
+                    return;
+            }
+            depthTextBox.Text = selectedToy.Depth.ToString();
+        }
+
+        private void UpdateToyHeight(Toy toy, UpdateType type)
+        {
+
         }
     }
 }
