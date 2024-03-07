@@ -36,19 +36,9 @@ namespace Zabawki
             AddToy(availableToysList.SelectedItem.ToString());
         }
 
-        private void removeButton_Click(object sender, EventArgs e)
-        {
-            toysList.Items.Remove(toysList.SelectedItem);
-        }
-
-        private void toysList_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            SetGroupBoxes((Toy)toysList.SelectedItem);
-        }
-
         private void AddToy(string toyName)
         {
-            switch(toyName)
+            switch (toyName)
             {
                 case "Car":
                     toysList.Items.Add(new Car());
@@ -65,6 +55,16 @@ namespace Zabawki
                 default:
                     break;
             }
+        }
+
+        private void removeButton_Click(object sender, EventArgs e)
+        {
+            toysList.Items.Remove(toysList.SelectedItem);
+        }
+
+        private void toysList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SetGroupBoxes((Toy)toysList.SelectedItem);
         }
 
         private void SetGroupBoxes(Toy selectedToy)
